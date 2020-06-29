@@ -42,6 +42,7 @@ endif
 
 ifeq ($(ARCH), lin)
 test.exe perf.exe : LDFLAGS = -rdynamic \
+		-fsanitize=address -fno-omit-frame-pointer -Wno-format-security \
 		-lpthread -lGL -ldl \
 		$(shell pkg-config --libs gtk+-2.0)
 endif
