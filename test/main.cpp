@@ -16,9 +16,6 @@ extern void testLookupTable();
 extern void testSinOscillator();
 extern void testHilbert();
 extern void testAudioMath();
-extern void initPerf();
-extern void perfTest();
-extern void perfTest2();
 extern void testFrequencyShifter();
 extern void testStateVariable();
 extern void testVocalAnimator();
@@ -162,13 +159,6 @@ if (runShaperGen) {
         return 0;
     }
 
-    if (runPerf) {
-        initPerf();
-
-        perfTest();
-        perfTest2();
-        return 0;
-    }
 
 #ifndef _MSC_VER
     testSimd();
