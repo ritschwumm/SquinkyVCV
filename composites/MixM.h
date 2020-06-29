@@ -282,7 +282,7 @@ inline void MixM<TBase>::setupFilters()
 template <class TBase>
 inline void MixM<TBase>::stepn(int div)
 {
-    float unbufferedCV[cvOffsetMaster + 1] = {0};
+    float unbufferedCV[cvOffsetMaster + 3] = {0};
     printf("in stepn size of buffer = %d\n", cvOffsetMaster + 1);
 
     const bool moduleIsMuted = TBase::params[ALL_CHANNELS_OFF_PARAM].value > .5f;
