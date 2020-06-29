@@ -73,5 +73,11 @@ endif
 #  -flto
 FLAGS += -finline-limit=500000 -finline-functions-called-once 
 
+ASAN_FLAGS = -fsanitize=address -fno-omit-frame-pointer -Wno-format-security
+FLAGS += $(ASAN_FLAGS)
+
+LDFLAGS += $(ASAN_FLAGS)
+
+
 include test.mk
 

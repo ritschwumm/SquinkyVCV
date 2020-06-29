@@ -447,7 +447,7 @@ inline void Sub<TBase>::step()
             (mixed1 >= limit/2) ||
             (mixed1 <= -limit/2) ||
             firstTime) {
-                printf(firstTime ? "fist time\n" : "about to crash\n");
+                printf(firstTime ?  "fist time\n" : "about to crash\n");
                 printf("mixed0 = %f, mixed1 = %f\n", mixed0, mixed1);
                 printf("mains = %f, %f %f %f\n", mains[0],  mains[1],  mains[2],  mains[3]);
                 printf("SUBS0= %s\n", toStr(subs0).c_str());
