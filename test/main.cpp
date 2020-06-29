@@ -222,9 +222,9 @@ if (runShaperGen) {
     testSlew4();   
     testMixHelper();
     testStereoMix();
-    printf("no testing mixers - asan don't like\n");
-  //  testMix4();
-  //  testMix8();
+
+    testMix4();
+    testMix8();
 
 //#ifndef _MSC_VER
 #if !defined(_MSC_VER) || !defined(_MIDIONLY)
