@@ -1,4 +1,4 @@
-
+#if 0
 #include "tutil.h"
 #include "TestComposite.h"
 #include "WVCO.h"
@@ -368,4 +368,5 @@ void testWVCO()
     testEnvLevel();
 }
 
+#endif
 #endif

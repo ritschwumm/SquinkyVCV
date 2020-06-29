@@ -87,7 +87,7 @@ extern void testEditCommands4();
 extern void testChaos();
 extern void testOnset();
 extern void testOnset2();
-extern void testWVCO();
+
 extern void testSub();
 extern void testSimd();
 extern void testSimdLookup();
@@ -158,6 +158,11 @@ if (runShaperGen) {
         calQ();
         return 0;
     }
+#ifndef _MSC_VER
+    testSub();
+    simd_testBiquad();
+
+#endif
 
 
 #ifndef _MSC_VER
@@ -172,11 +177,7 @@ if (runShaperGen) {
     testOnset2();
 
     testBiquad();
-#ifndef _MSC_VER
-    testSub();
-    simd_testBiquad();
-    testWVCO();
-#endif
+
     testSimpleQuantizer();
 
     testIComposite();
