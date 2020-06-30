@@ -259,7 +259,7 @@ inline void MultiLPF<N>::step(const float * input)
 {
     assert((N % 4) == 0);
     for (int i = 0; i < N; i += 4) {
-        printf("in lpf step, i = %d input = %p\n", i, input); fflush(stdout);
+       // printf("in lpf step, i = %d input = %p\n", i, input); fflush(stdout);
         __m128 input4 = _mm_loadu_ps(input + i);  // load 4 input samples
         __m128 memory4 = _mm_loadu_ps(memory + i);
 
